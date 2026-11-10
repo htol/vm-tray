@@ -1,0 +1,14 @@
+[Unit]
+Description=Tray icon for libvirt VMs
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/vm-tray
+Restart=on-failure
+# virt-viewer windows are started from this service; keep them open when the
+# tray is restarted or stopped.
+KillMode=process
+
+[Install]
+WantedBy=graphical-session.target
