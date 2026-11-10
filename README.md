@@ -4,6 +4,8 @@ Tray icon for libvirt virtual machines. Clicking the icon opens a popup above
 it with one row per VM: name, state, a Start/Stop button and a button that
 opens `virt-viewer`.
 
+![Popup with the VM list](docs/popup.png)
+
 - Tray: StatusNotifierItem, works with KDE Plasma and SNI hosts such as waybar.
 - Popup: GTK4 with wlr-layer-shell, anchored next to the tray icon. Supported
   by KWin, niri, Hyprland and Sway.
